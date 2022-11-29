@@ -1,8 +1,9 @@
 const navBtn = document.querySelector(".nav__btn");
-const headerEl = document.querySelector(".header");
+const navElem = document.querySelector(".nav");
 const htmlEl = document.querySelector("html");
 
 navBtn.addEventListener("click", () => {
-  headerEl.classList.toggle("nav--open");
+  navBtn.classList.toggle("open");
+  navElem.classList.toggle("open");
   htmlEl.classList.toggle("scrollable");
 });
