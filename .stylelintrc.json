@@ -11,6 +11,8 @@
   ],
   "rules": {
     "max-nesting-depth": 5,
+    "scss/no-global-function-names": null,
+    "selector-class-pattern": null,
     "color-hex-case": "lower",
     "at-rule-empty-line-before": [
       "always",

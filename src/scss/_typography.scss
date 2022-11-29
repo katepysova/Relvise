@@ -1,0 +1,34 @@
+@import "./variables";
+
+.heading-primary {
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: $color-black;
+}
+
+.heading-secondary {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: $color-black;
+}
+
+.heading-tertiary {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: $color-black;
+}
+
+.paragraph {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $color-text-gray;
+}

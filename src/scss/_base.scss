@@ -1,8 +1,47 @@
+@import "variables";
+
 * {
+  &,
   &::before,
   &::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: inherit;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  font-family: $font-value;
+}
+
+img {
+  vertical-align: top;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 196px;
+  max-width: 1440px;
+  width: 100%;
+
+  @media only screen and (max-width: $bp-lg) {
+    padding: 0 96px;
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    padding: 0 48px;
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    padding: 0 24px;
   }
 }
