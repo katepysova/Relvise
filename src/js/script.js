@@ -5,5 +5,5 @@ const htmlEl = document.querySelector("html");
 navBtn.addEventListener("click", () => {
   navBtn.classList.toggle("open");
   navElem.classList.toggle("open");
-  htmlEl.classList.toggle("scrollable");
+  htmlEl.classList.toggle("u-static");
 });

@@ -12,10 +12,10 @@
     display: flex;
     align-items: center;
     gap: 133px;
-    height: 104px;
+    height: $header-height-desktop;
 
     @media only screen and (max-width: $bp-sm) {
-      height: 64px;
+      height: $header-height-mobile;
       gap: 0;
       justify-content: space-between;
     }
@@ -61,7 +61,7 @@
       line-height: 24px;
       letter-spacing: 0.2px;
       text-align: center;
-      transition: all 0.3s ease-out;
+      transition: $default-animation;
 
       @media only screen and (max-width: $bp-sm) {
         font-size: 24px;
@@ -71,7 +71,7 @@
 
     &:hover,
     &:active {
-      color: darken($color-text-gray, 20%);
+      color: $color-primary;
     }
   }
 
@@ -97,7 +97,7 @@
         width: 100%;
         height: 3px;
         left: 0;
-        transition: all 0.3s ease-out;
+        transition: $default-animation;
       }
 
       &::before {
@@ -139,8 +139,10 @@
     top: 0;
     left: -100%;
     height: 100%;
+    min-height: 100%;
     width: 100%;
-    transition: all .3s ease-in;
+    min-width: 100%;
+    transition: $default-animation;
 
     &.open {
       width: 100%;
