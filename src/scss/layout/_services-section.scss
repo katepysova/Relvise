@@ -1,0 +1,116 @@
+@import "../variables";
+
+.services {
+  margin-top: -110px;
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    padding-bottom: 80px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+
+    @media only screen and (max-width: $bp-extra-lg) {
+      gap: 24px;
+    }
+
+    @media only screen and (max-width: $bp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background-color: $color-white;
+    box-shadow: 0 13px 19px rgb(0 0 0 / 7%);
+    padding: 35px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: $default-animation;
+
+    &:hover {
+      background-color: $color-secondary;
+
+      & > * {
+        color: $color-white;
+      }
+    }
+
+    @media only screen and (max-width: $bp-extra-lg) {
+      padding: 36px 24px;
+    }
+  }
+
+  &__card-icon {
+    color: $color-secondary;
+    height: 48px;
+    width: 48px;
+  }
+
+  &__paragraph {
+    width: 50%;
+    margin: 10px auto 50px;
+
+    @media only screen and (max-width: $bp-extra-lg) {
+      width: 90%;
+    }
+
+    @media only screen and (max-width: $bp-extra-sm) {
+      width: 100%;
+    }
+  }
+
+  &__data {
+    &-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+
+      @media only screen and (max-width: $bp-extra-lg) {
+        gap: 24px;
+      }
+
+      @media only screen and (max-width: $bp-lg) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media only screen and (max-width: $bp-sm) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-card {
+      padding: 30px;
+      background-color: $color-white;
+
+      &-icon {
+        color: $color-secondary;
+        width: 48px;
+        height: 48px;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        text-align: center;
+        color: $color-text-gray;
+      }
+
+      @media only screen and (max-width: $bp-extra-lg) {
+        padding: 36px 24px;
+      }
+    }
+  }
+}

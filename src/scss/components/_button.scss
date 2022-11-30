@@ -24,11 +24,13 @@
     &:hover {
       transform: translateY(-3px);
       background-color: darken($color-primary, 20%);
+      border-color: darken($color-primary, 20%);
     }
 
     &:active {
       transform: translateY(-1px);
       background-color: darken($color-primary, 40%);
+      border-color: darken($color-primary, 40%);
     }
   }
 

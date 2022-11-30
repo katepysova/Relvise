@@ -1,6 +1,8 @@
 @import "../variables";
 
 .hero {
+  position: relative;
+
   &__container {
     background-image: url("../images/hero.jpg");
     background-size: cover;
@@ -9,14 +11,21 @@
     padding-top: calc($header-height-desktop + 80px);
     padding-bottom: 191px;
 
-    @media only screen and (max-width: $bp-md) {
+    @media only screen and (max-width: $bp-lg) {
       background-position: right;
-      background-image: linear-gradient(to right bottom, rgba(224, 234, 252, 0.35), rgba(207, 222, 243, 0.85)),  url("../images/hero.jpg");
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      background-image: linear-gradient(
+          to right bottom,
+          rgb(224 234 252 / 35%),
+          rgb(207 222 243 / 85%)
+        ),
+        url("../images/hero.jpg");
     }
 
     @media only screen and (max-width: $bp-sm) {
       padding-top: calc($header-height-mobile + 48px);
-      padding-bottom: 112px;
     }
   }
 
@@ -38,7 +47,7 @@
     letter-spacing: 0.2px;
     color: $color-text-gray;
 
-    @media only screen and (max-width: $bp-md){
+    @media only screen and (max-width: $bp-md) {
       color: darken($color-text-gray, 35%);
     }
   }
