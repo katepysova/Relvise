@@ -3,10 +3,20 @@
 .hero {
   &__container {
     background-image: url("../images/hero.jpg");
-    padding-top: $header-height-desktop;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: calc($header-height-desktop + 80px);
+    padding-bottom: 191px;
+
+    @media only screen and (max-width: $bp-md) {
+      background-position: right;
+      background-image: linear-gradient(to right bottom, rgba(224, 234, 252, 0.35), rgba(207, 222, 243, 0.85)),  url("../images/hero.jpg");
+    }
 
     @media only screen and (max-width: $bp-sm) {
-      padding-top: $header-height-mobile;
+      padding-top: calc($header-height-mobile + 48px);
+      padding-bottom: 112px;
     }
   }
 
@@ -15,6 +25,10 @@
     display: flex;
     flex-direction: column;
     gap: 35px;
+
+    @media only screen and (max-width: $bp-md) {
+      width: 100%;
+    }
   }
 
   &__subheading {
@@ -23,10 +37,18 @@
     line-height: 30px;
     letter-spacing: 0.2px;
     color: $color-text-gray;
+
+    @media only screen and (max-width: $bp-md){
+      color: darken($color-text-gray, 35%);
+    }
   }
 
   &__buttons {
     display: flex;
     gap: 10px;
+
+    @media only screen and (max-width: $bp-extra-sm) {
+      flex-direction: column;
+    }
   }
 }
