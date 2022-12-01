@@ -9,7 +9,8 @@
     "build": "cross-env NODE_ENV=production gulp build",
     "lint:fix": "eslint --ext .js --fix .",
     "stylelint:fix": "stylelint --fix **/*.{scss,sass}",
-    "format": "npm run stylelint:fix && npm run lint:fix",
+    "prettier:fix": "prettier --write **/*.html",
+    "format": "npm run stylelint:fix && npm run lint:fix && npm run prettier:fix",
     "prepare": "husky install"
   },
   "author": "Kate",
