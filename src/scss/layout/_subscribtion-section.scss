@@ -49,6 +49,7 @@
     }
 
     .form__submit-btn {
+      cursor: pointer;
       display: inline-block;
       background-color: $color-primary;
       color: $color-white;
