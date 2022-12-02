@@ -97,7 +97,6 @@
     .footer__container {
       padding-top: 25px;
       padding-bottom: 25px;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -118,8 +117,8 @@
     color: $color-text-gray;
 
     @media only screen and (max-width: $bp-md) {
-        text-align: center;
-      }
+      text-align: center;
+    }
   }
 
   &__socials-list {
@@ -131,8 +130,8 @@
 
   &__socials-link {
     svg {
-        width: 24px;
-        height: 24px;
+      width: 24px;
+      height: 24px;
     }
   }
 }
