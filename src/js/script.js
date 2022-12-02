@@ -17,7 +17,6 @@ allLinks.forEach((link) => {
       const target = document.querySelector(href);
       target.scrollIntoView({
         behavior: "smooth",
-        top: 40,
       });
     }
 
