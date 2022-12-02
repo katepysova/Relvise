@@ -10,11 +10,11 @@
     height: 77px;
     background-color: $color-black;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     z-index: -1;
   }
-  
+
   &__container {
     position: relative;
     z-index: 1;

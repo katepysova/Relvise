@@ -1,0 +1,114 @@
+@import "../variables";
+
+.get-in-touch{
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  &__paragraph {
+    width: 50%;
+    margin: 10px auto 130px;
+
+    @media only screen and (max-width: $bp-extra-lg) {
+      width: 90%;
+      margin-bottom: 100px;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      margin-bottom: 48px;
+    }
+
+    @media only screen and (max-width: $bp-extra-sm) {
+      width: 100%;
+    }
+  }
+
+  &__cards {
+    width: 65%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    @media only screen and (max-width: $bp-lg) {
+      width: 75%;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      width: 65%;
+      grid-template-columns: 1fr;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      width: 95%;
+    }
+  }
+
+  &__card {
+    cursor: pointer;
+    background-color: $color-white;
+    padding: 50px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    transition: $default-animation;
+
+    &-icon {
+      width: 72px;
+      height: 72px;
+      color: $color-secondary;
+    }
+
+    &-emails {
+      text-align: center;
+      list-style-type: none;
+    }
+
+    &-email {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+    }
+
+    &-support {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+    }
+
+    &-request {
+      &:link,
+      &:visited {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: transparent;
+        color: $color-primary;
+        border: 1px solid currentcolor;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+
+      .get-in-touch__card-icon {
+        color: $color-white;
+      }
+
+      .get-in-touch__card-request {
+        color: $color-white;
+      }
+    }
+  }
+}
