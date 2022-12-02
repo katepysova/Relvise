@@ -2,12 +2,11 @@
 
 .clients {
   &__container {
-    padding-bottom: 87px;
+    padding-top: 58px;
+    padding-bottom: 58px;
   }
 
   &__images {
-    padding-top: 58px;
-    padding-bottom: 58px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -18,10 +17,5 @@
       padding: 0 25px;
       max-width: 100%;
     }
-  }
-
-  .separator {
-    background-color: $color-black;
-    height: 77px;
   }
 }
