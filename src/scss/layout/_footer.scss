@@ -1,0 +1,138 @@
+@import "../variables";
+
+.footer {
+  &__main {
+    background-color: $color-black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: $color-white;
+
+    .footer__container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 30px;
+
+      @media only screen and (max-width: $bp-extra-lg) {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 36px;
+      }
+
+      @media only screen and (max-width: $bp-lg) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 36px;
+      }
+
+      @media only screen and (max-width: $bp-md) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 24px;
+      }
+
+      @media only screen and (max-width: $bp-sm) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &-title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      color: #8ec2f2;
+      transition: $default-animation;
+    }
+
+    &-link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        cursor: pointer;
+        color: $color-white;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        transition: $default-animation;
+      }
+
+      &--icon {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        align-items: start;
+        gap: 10px;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-primary;
+
+        .footer__list-icon {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__sub {
+    background-color: $color-white;
+
+    .footer__container {
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      @media only screen and (max-width: $bp-md) {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+  }
+
+  &__rights {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: $color-text-gray;
+
+    @media only screen and (max-width: $bp-md) {
+        text-align: center;
+      }
+  }
+
+  &__socials-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__socials-link {
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+  }
+}

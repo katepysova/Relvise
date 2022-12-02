@@ -1,24 +1,25 @@
 @import "../variables";
 
 .contact {
-    background-color: $color-white;
-    &__container {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  background-color: $color-white;
 
-        @media only screen and (max-width: $bp-md) {
-            flex-direction: column;
-            gap: 36px;
-            align-items: flex-start;
-        }
-    }
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    @media only screen and (max-width: $bp-md) {
+      flex-direction: column;
+      gap: 36px;
+      align-items: flex-start;
     }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
