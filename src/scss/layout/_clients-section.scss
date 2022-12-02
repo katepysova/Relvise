@@ -1,21 +1,27 @@
 @import "../variables";
 
 .clients {
-    &__container {
-        padding-top: 58px;
-        padding-bottom: 58px;
-    }
+  &__container {
+    padding-bottom: 87px;
+  }
 
-    &__images {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        align-items: center;
+  &__images {
+    padding-top: 58px;
+    padding-bottom: 58px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 
-        img {
-            padding: 0 25px;
-            max-width: 100%;
-        }
+    img {
+      padding: 0 25px;
+      max-width: 100%;
     }
+  }
+
+  .separator {
+    background-color: $color-black;
+    height: 77px;
+  }
 }
