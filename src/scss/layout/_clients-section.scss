@@ -1,0 +1,21 @@
+@import "../variables";
+
+.clients {
+    &__container {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+    &__images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            padding: 0 25px;
+            max-width: 100%;
+        }
+    }
+}
