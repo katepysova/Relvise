@@ -23,6 +23,7 @@ import imagemin from "gulp-imagemin";
 import sprite from "gulp-svg-sprite";
 
 import gulpif from "gulp-if";
+import gulpPages from "gulp-gh-pages";
 import sourcemaps from "gulp-sourcemaps";
 import path from "./gulp.config.js";
 
@@ -69,11 +70,11 @@ const style = () =>
         })
       )
     )
-    .pipe(concat("style.min.css"))
+    .pipe(concat("style.css"))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.css))
     .pipe(gulpif(isBuild, cleanCSS({ compatibility: "ie8" })))
-    .pipe(gulpif(isBuild, concat("style.min.css")))
+    .pipe(gulpif(isBuild, concat("style.css")))
     .pipe(gulpif(isBuild, gulp.dest(path.build.css)));
 
 const js = () =>
@@ -159,6 +160,12 @@ const svgSprite = () => {
     .pipe(gulp.dest(path.build.svg));
 };
 
+const createGHPages = () => {
+  return gulp
+    .src(`${path.buildFolder}/**/*`, { allowEmpty: true })
+    .pipe(gulpPages());
+};
+
 const reset = () => deleteAsync(path.clear);
 
 const watcher = () => {
@@ -179,7 +186,9 @@ const watcher = () => {
 const mainTask = gulp.parallel(html, style, js, images);
 const dev = gulp.series(reset, svgSprite, mainTask, watcher);
 const build = gulp.series(reset, svgSprite, mainTask);
+const deploy = gulp.series(build, createGHPages);
 
 gulp.task("dev", dev);
 gulp.task("build", build);
+gulp.task("deploy", deploy);
 gulp.task(svgSprite);
